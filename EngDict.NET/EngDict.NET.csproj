@@ -4,10 +4,43 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Title>EngDict.NET</Title>
+    <Authors>phanxuanquang</Authors>
+    <Company>phanxuanquang</Company>
+    <Description>A .NET wrapper of FreeDictionary API, supporting English word definitions, synonyms, pronunciation, and example usage</Description>
+    <PackageProjectUrl>https://github.com/phanxuanquang/EngDict.NET</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/phanxuanquang/EngDict.NET</RepositoryUrl>
+    <PackageTags>freeDictionary, dictionary, english, search, oxford, cambridge, google translate</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <NeutralLanguage>en-001</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>GPL-3.0 license</PackageLicenseExpression>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
