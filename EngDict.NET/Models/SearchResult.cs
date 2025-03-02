@@ -2,7 +2,7 @@
 {
     public class SearchResult
     {
-        public IEnumerable<Phonetic>? Phonetics { get; set; }
-        public required IEnumerable<Meaning> Meanings { get; set; }
+        public List<Phonetic>? Phonetics { get; set; }
+        public required List<Meaning> Meanings { get; set; }
     }
 }

@@ -38,7 +38,8 @@ namespace EngDict.NET
                             {
                                 IpaTranscription = string.IsNullOrEmpty(phonetic.Text) ? null : phonetic.Text,
                                 AudioUrl = string.IsNullOrEmpty(phonetic.Audio) ? null : phonetic.Audio
-                            }),
+                            })
+                            .ToList(),
                 Meanings = root.Meanings
                         .OrderBy(meaning => meaning.PartOfSpeech)
                         .Select(meaning => new Models.Meaning
@@ -60,7 +61,8 @@ namespace EngDict.NET
                             Antonyms = meaning.Antonyms.Count == 0
                                 ? null
                                 : [.. meaning.Antonyms.OrderBy(w => w)]
-                        }),
+                        })
+                        .ToList(),
             });
 
             if (partOfSpeeches != null && partOfSpeeches.Any())
